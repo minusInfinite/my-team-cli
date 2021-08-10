@@ -1,0 +1,29 @@
+{
+  "name": "my-team-cli",
+  "version": "0.1.0",
+  "description": "Create a landing page for your project with this CLI tool",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/minusInfinite/my-team-cli.git"
+  },
+  "author": "minusinfinite <ashley@minusinfinite.net> (https://github.com/minusInfinite)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/minusInfinite/my-team-cli/issues"
+  },
+  "homepage": "https://github.com/minusInfinite/my-team-cli#readme",
+  "packageManager": "yarn@3.0.0",
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "jest": "^27.0.6",
+    "prettier": "^2.3.2"
+  },
+  "dependencies": {
+    "inquirer": "^8.1.2"
+  }
+}
