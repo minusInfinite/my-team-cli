@@ -65,7 +65,7 @@ typings/
 # Output of 'npm pack'
 *.tgz
 
-# Yarn files
+# Yarn directories
 .yarn/*
 !.yarn/patches
 !.yarn/releases

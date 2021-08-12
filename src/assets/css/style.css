@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: #c5d3ff;
+    height: 7rem;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+header > h1 {
+    color: #2d5eff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+main {
+    height: 50vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card {
+    margin: 0.5rem;
+    height: 20rem;
+    width: 18rem;
+    background-color: #fff6f6;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.card-header {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ffc8c8;
+    padding-bottom: 1rem;
+    color: #b81010;
+}
+
+.card-header h2 {
+    flex: 1 0 100%;
+    margin-left: 0.5rem;
+}
+
+.card-header span {
+    margin-left: 0.5rem;
+    font-size: 1.25em;
+}
+
+.fa-coffee {
+    font-size: 1.25rem;
+    margin-left: 0.5rem;
+}
+
+.card-body ul {
+    list-style: none;
+    padding: 3rem 0.5rem 0 0.5rem;
+    margin: 0;
+}
+
+.card-body li {
+    border: 1px solid #ffc8c8;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    font-family: "Courier New", Courier, monospace;
+    background-color: #ffffff;
+}
