@@ -14,6 +14,7 @@ describe("Manager", () => {
             expect(obj.id).toBe(1)
             expect(obj.email).toBe("howard@company.com")
             expect(obj.officeNumber).toBe("08 8383 2626")
+            expect(obj.getRole()).toBe("Manager")
         })
 
         // it("Should throw and Error if no params are provided", () => {
