@@ -26,7 +26,7 @@ function genHTML(data) {
                 <h1>My Team</h1>
             </header>
             <main>
-            ${data.map((data) => `${data}`)}
+            ${data.map((data) => `${data}`).join(" ")}
             </main>
             </body>
         </html>
