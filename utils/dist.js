@@ -1,5 +1,6 @@
 const fs = require("fs/promises")
 
+/**Make the folder for team page then copy the CSS file to it. */
 function makeDist() {
     fs.mkdir("./dist/assets/css", { recursive: true })
         .then(() => {

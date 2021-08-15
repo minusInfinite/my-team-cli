@@ -1,3 +1,7 @@
+const fs = require("fs/promises")
+const chalk = require("chalk")
+
+/**Compile and return the Team HTML Templates */
 function genHTML(data) {
     return `
     <!DOCTYPE html>
@@ -29,10 +33,15 @@ function genHTML(data) {
     `
 }
 
-function finsih(fileName, data) {
+/**
+ * Function to write collected data to a file
+ * @param {Sting} fileName
+ * @param {Array} data
+ */
+function finish(fileName, data) {
     fs.writeFile(fileName, genHTML(data))
         .then(() => console.info(`✔️ ${chalk.green("Html created:")}`))
         .catch((err) => console.error(err))
 }
 
-module.exports = finsih
+module.exports = finish

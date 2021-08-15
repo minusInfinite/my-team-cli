@@ -14,19 +14,20 @@ describe("Engineer", () => {
             expect(obj.id).toBe(1)
             expect(obj.email).toBe("howard@company.com")
             expect(obj.github).toBe("howard")
-            expect(obj.getRole()).toBe("Engineer")
+        })
+    })
+    describe("Errors", () => {
+        it("Should throw and Error if no params are provided", () => {
+            const cb = () => new Engineer()
+
+            expect(cb).toThrow()
         })
 
-        // it("Should throw and Error if no params are provided", () => {
-        //     const cb = () => new Employee()
+        it("Should throw an error if Github is not valid are not provided", () => {
+            const noGithub = () =>
+                new Engineer("Howard", 1, "howard@company.com")
 
-        //     expect(cb).toThrow()
-        // })
-
-        // it("Should throw an error if name, id or email is not valid are not provided", () => {
-        //     const justName = () => new Employee("Howard")
-
-        //     expect(justName).toThrow()
-        // })
+            expect(noGithub).toThrow()
+        })
     })
 })

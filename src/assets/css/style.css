@@ -17,22 +17,24 @@ header {
 
 header > h1 {
     color: #2d5eff;
-    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
 main {
     height: 50vh;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
 }
 
 .card {
-    margin: 0.5rem;
+    flex: 1 1 25%;
+    margin: 1rem 0.8rem 0.8rem 0.8rem;
     height: 20rem;
     width: 18rem;
     background-color: #fff6f6;
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
 }
 
 .card-header {

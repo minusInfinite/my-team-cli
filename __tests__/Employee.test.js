@@ -8,9 +8,9 @@ describe("Employee", () => {
             expect(obj.name).toBe("Howard")
             expect(obj.id).toBe(1)
             expect(obj.email).toBe("howard@company.com")
-            expect(obj.getRole()).toBe("Employee")
         })
-
+    })
+    describe("Data Transformation", () => {
         it("Should throw and Error if no params are provided", () => {
             const cb = () => new Employee()
 
@@ -32,15 +32,27 @@ describe("Employee", () => {
             expect(idString).toThrow()
             expect(emailWrong).toThrow()
         })
+    })
 
+    describe("Data Transformation", () => {
         it("Name should be in Title Case", () => {
             const obj1 = new Employee("howard", 1, "howard@company.com")
-            const obj2 = new Employee("jesse", 1, "howard@company.com")
-            const obj3 = new Employee("moe", 1, "howard@company.com")
+            const obj2 = new Employee("jesse", 1, "jesse@company.com")
+            const obj3 = new Employee("moe", 1, "moe@company.com")
 
             expect(obj1.name).toBe("Howard")
             expect(obj2.name).toBe("Jesse")
             expect(obj3.name).toBe("Moe")
+        })
+
+        it("Email should be in Lower Case", () => {
+            const obj1 = new Employee("howard", 1, "Howard@company.com")
+            const obj2 = new Employee("jesse", 1, "Jesse@company.com")
+            const obj3 = new Employee("moe", 1, "Moe@company.com")
+
+            expect(obj1.email).toBe("howard@company.com")
+            expect(obj2.email).toBe("jesse@company.com")
+            expect(obj3.email).toBe("moe@company.com")
         })
     })
 })

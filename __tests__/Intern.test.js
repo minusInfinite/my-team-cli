@@ -14,19 +14,19 @@ describe("Intern", () => {
             expect(obj.id).toBe(1)
             expect(obj.email).toBe("howard@company.com")
             expect(obj.school).toBe("Adelaide Uni")
-            expect(obj.getRole()).toBe("Intern")
+        })
+    })
+    describe("Errors", () => {
+        it("Should throw and Error if no params are provided", () => {
+            const cb = () => new Intern()
+
+            expect(cb).toThrow()
         })
 
-        // it("Should throw and Error if no params are provided", () => {
-        //     const cb = () => new Employee()
+        it("Should throw an error if School is not valid are not provided", () => {
+            const noSchool = () => new Intern("Howard", 1, "howard@company.com")
 
-        //     expect(cb).toThrow()
-        // })
-
-        // it("Should throw an error if name, id or email is not valid are not provided", () => {
-        //     const justName = () => new Employee("Howard")
-
-        //     expect(justName).toThrow()
-        // })
+            expect(noSchool).toThrow()
+        })
     })
 })
