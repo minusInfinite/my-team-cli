@@ -1,11 +1,16 @@
 //node modules
 const inquirer = require("inquirer")
 const chalk = require("chalk")
+const fs = require("fs/promises")
 
 //class modules
 const Engineer = require("./lib/Engineer")
 const Intern = require("./lib/Intern")
 const Manager = require("./lib/Manager")
+
+//utilities
+const makeDist = require("./utils/dist")
+const finish = require("./utils/genhtml")
 
 /** @type {inquirer.QuestionCollection} */
 const empTypePrompts = {
@@ -20,6 +25,7 @@ const empTypePrompts = {
 const employees = []
 
 function init() {
+    makeDist()
     console.info(
         `💻 ${chalk.bold.underline(
             "This tool will assist in creating a Team page. Enter the Manager first."
@@ -66,7 +72,7 @@ function addManager() {
                     addIntern()
                 }
                 if (nextAns.empType === "Finsh") {
-                    genHTML()
+                    finsih("./dist/team.html", employees)
                 }
             })
         })
@@ -115,7 +121,7 @@ function addEngineer() {
                     addIntern()
                 }
                 if (nextAns.empType === "Finsh") {
-                    genHTML()
+                    finsih("./dist/team.html", employees)
                 }
             })
         })
@@ -164,15 +170,11 @@ function addIntern() {
                     addIntern()
                 }
                 if (nextAns.empType === "Finsh") {
-                    genHTML()
+                    finsih("./dist/team.html", employees)
                 }
             })
         })
         .catch((err) => console.error(err))
-}
-
-function genHTML() {
-    console.log(JSON.stringify(employees))
 }
 
 init()
