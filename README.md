@@ -40,7 +40,11 @@ yarn start
 
 ## Examples
 
+[Video demo](https://youtu.be/wGfslArMGAU)
+
 ![A screenshot of the application working in a terminal window](./assets/cli-output.png)
+
+![A screenshot of the HTML page generated](./assets/html-output.png)
 
 ## Credits
 

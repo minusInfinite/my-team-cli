@@ -40,7 +40,11 @@ function genHTML(data) {
  */
 function finish(fileName, data) {
     fs.writeFile(fileName, genHTML(data))
-        .then(() => console.info(`✔️ ${chalk.green("Html created:")}`))
+        .then(() =>
+            console.info(
+                `✔️ ${chalk.green("HTML Page created:")}in ./dist/teams.html`
+            )
+        )
         .catch((err) => console.error(err))
 }
 
