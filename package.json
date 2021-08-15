@@ -1,6 +1,6 @@
 {
     "name": "my-team-cli",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "description": "Create a landing page for your project with this CLI tool",
     "main": "index.js",
     "scripts": {
@@ -19,7 +19,6 @@
     "homepage": "https://github.com/minusInfinite/my-team-cli#readme",
     "packageManager": "yarn@3.0.0",
     "devDependencies": {
-        "cross-env": "^7.0.3",
         "eslint": "^7.32.0",
         "jest": "^27.0.6",
         "prettier": "^2.3.2"
