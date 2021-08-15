@@ -33,7 +33,7 @@ function addIntern() {
         .then((answers) => {
             const newEmp = new Intern(
                 answers.name,
-                1,
+                employees.length + 1,
                 answers.email,
                 answers.school
             )
