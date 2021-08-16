@@ -13,6 +13,7 @@ describe("Intern", () => {
             expect(obj.name).toBe("Howard")
             expect(obj.id).toBe(1)
             expect(obj.email).toBe("howard@company.com")
+            expect(obj.role).toBe("Intern")
             expect(obj.school).toBe("Adelaide Uni")
         })
     })
